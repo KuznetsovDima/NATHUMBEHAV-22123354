@@ -118,12 +118,13 @@ concordance_heritability<- ggplot(data.frame(x = c(0,0.97))) +
   xlab('Heritability of liability (%)') + 
   scale_x_continuous(limits = c(0, 0.97), expand = c(0, 0), breaks = c(0.20,0.40,0.60,0.80,0.97),
                      position = 'bottom',labels = scales::percent_format(accuracy = 1))+ 
-  geom_hline(yintercept=0,size = 1.5)+
-  geom_hline(yintercept=0.2,size = 0.5,linetype="dotted", color = "black")+
-  geom_hline(yintercept=0.4,size = 0.5,linetype="dotted", color = "black")+
-  geom_hline(yintercept=0.6,size = 0.5,linetype="dotted", color = "black")+
-  geom_hline(yintercept=0.8,size = 0.5,linetype="dotted", color = "black")+
-  geom_hline(yintercept=1,size = 0.5,linetype="dotted", color = "black")+
+  geom_hline(yintercept=0,size = 1)+
+  geom_vline(xintercept = 0,size = 1)+
+  # geom_hline(yintercept=0.2,size = 0.5,linetype="dotted", color = "black")+
+  # geom_hline(yintercept=0.4,size = 0.5,linetype="dotted", color = "black")+
+  # geom_hline(yintercept=0.6,size = 0.5,linetype="dotted", color = "black")+
+  # geom_hline(yintercept=0.8,size = 0.5,linetype="dotted", color = "black")+
+  # geom_hline(yintercept=1,size = 0.5,linetype="dotted", color = "black")+
   theme(axis.text = element_text(color = "black") )+
   theme(axis.title = element_text(color = "black",size=10) )+
   
